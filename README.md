@@ -1,6 +1,6 @@
 # kite
 
-A package that helps to build C extensions for Blade as well as other C/C++ applications from a Blade script/project. Kite does not replace a build system, but rather sets up a build system for you and leverage them accordingly.
+A package that helps to build C extensions for Zuri as well as other C/C++ applications from a Zuri script/project. Kite does not replace a build system, but rather sets up a build system for you and leverage them accordingly.
 
 
 ## Package Information
@@ -8,7 +8,7 @@ A package that helps to build C extensions for Blade as well as other C/C++ appl
 
 - **Name:** git
 - **Version:** 1.0.0
-- **Homepage:** [https://github.com/blade-lang/kite](https://github.com/blade-lang/kite)
+- **Homepage:** [https://github.com/zuri-lang/kite](https://github.com/zuri-lang/kite)
 - **Tags:** `build`, `gcc`, `compiler`, `build-system`, `extension`, `c`, `package`, `library`.
 - **Author:** Richard Ore <eqliqandfriends@gmail.com>
 - **License:** ISC
@@ -45,7 +45,7 @@ After the above steps, you have two ways of building the project. Firstly, via t
 
 Simply run the command `kite` from the root of the application.
 
-If you have installed `kite` locally, you can build your project by running the following from a script of the Blade REPL.
+If you have installed `kite` locally, you can build your project by running the following from a script of the Zuri REPL.
 
 
 ```

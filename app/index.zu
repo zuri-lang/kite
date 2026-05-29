@@ -25,7 +25,7 @@ def _get_config() {
   if !config_file.exists() raise Exception(_INSTALL_ERROR)
 
   var config = json.decode(config_file.read())
-  config.blade_dir = os.dir_name(os.exe_path)
+  config.zuri_dir = os.dir_name(os.exe_path)
   config.build_dir = build_dir
 
   return config
@@ -163,8 +163,8 @@ def _do_build(type, name, options) {
   }
 
   # add required include directories
-  include_dirs.append('"${config.blade_dir}/includes"')
-  link_dirs.append('"${config.blade_dir}"')
+  include_dirs.append('"${config.zuri_dir}/includes"')
+  link_dirs.append('"${config.zuri_dir}"')
 
   var flags = ' '.join(options.get('flags', [])).trim()
   var linux_flags = ' '.join(options.get('linux_flags', [])).trim()
@@ -183,7 +183,7 @@ def _do_build(type, name, options) {
   }
 
   var includes = ' '.join(include_dirs.map(@(i){ return '-I${i}' })).trim()
-  var link_paths = (' '.join(link_dirs.map(@(i){ return '-L${i}' })) + ' -lblade').trim()
+  var link_paths = (' '.join(link_dirs.map(@(i){ return '-L${i}' })) + ' -lzuri').trim()
   var link_flags = ' '.join(flags).trim()
 
   if type != EXE {
@@ -330,7 +330,7 @@ def build(path, output_dir) {
   if !output_dir and config.contains('output_dir') {
     output_dir = config.get('output_dir')
   } else if !output_dir {
-    output_dir = os.join_paths(os.cwd(), '.blade/bin')
+    output_dir = os.join_paths(os.cwd(), '.zuri/bin')
   }
 
   if output_dir {

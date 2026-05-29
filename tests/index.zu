@@ -7,7 +7,7 @@ echo 'Library at: ' + app.build_lib('example', {
   link_dirs: [
     'C:\\Users\\kite\\Test'
   ],
-  output_dir: './.blade/bin/'
+  output_dir: './.zuri/bin/'
 })
 
 

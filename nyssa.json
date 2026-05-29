@@ -1,8 +1,8 @@
 {
   "name": "kite", 
   "version": "1.1.0", 
-  "description": "A C/C++ extensions builder for Blade and other applications.", 
-  "homepage": "https://github.com/blade-lang/kite", 
+  "description": "A C/C++ extensions builder for Zuri and other applications.", 
+  "homepage": "https://github.com/zuri-lang/kite", 
   "tags": [
     "build",
     "gcc",
@@ -18,7 +18,7 @@
   "author": "Richard Ore <eqliqandfriends@gmail.com>", 
   "license": "ISC", 
   "sources": [
-    "https://nyssa.bladelang.org"
+    "https://nyssa.zurilang.org"
   ], 
   "deps": {
     "tar": "1.0.0"
