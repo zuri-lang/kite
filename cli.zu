@@ -3,7 +3,7 @@ import io
 import .app
 
 var config_file = os.join_paths(os.dir_name(__file__), 'config.json')
-var setup_file = os.join_paths(os.dir_name(__file__), 'setup.b')
+var setup_file = os.join_paths(os.dir_name(__file__), 'setup.zu')
 
 catch {
   if !file(config_file).exists() {
